@@ -1,0 +1,15 @@
+<div class="row">
+   <div *ngIf="resultados.length == 0">
+      <h3 class="bg-danger m-1 p-2 text-center rounded-3">Introduce un termino para buscar</h3>
+   </div>
+   <div *ngFor="let gif of resultados;let i=index" class="col-md-4 col-sm-6 animate__animated animate__backInDown animate__faster">
+      <div class="card">
+         <img [src]="gif.images.downsized_medium.url" [alt]="gif.title" class="card-img-top">
+         <div class="card-body">
+            <p class="card-text">
+               {{ gif.title }}
+            </p>
+         </div>
+      </div>
+   </div>
+</div>
